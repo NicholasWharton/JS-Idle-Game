@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rescue Clickers</title>
+		<link rel="stylesheet" type="text/css" href="idle.css" />
+		<script src="idle.js"></script>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		
+	</head>
+	<body onload="setupGame()">
+		<div id="buyWorker">
+			<div id="popup" style="display: none">some text here</div>
+		</div>
+		<div class=pa>
+		  	<center>
+		  		<div class="demo">
+			  		<p><button onclick="moneyClick(10)" data-tooltip="Click this to donate to the cause" class=" cDonation xxlarge hoverWhite roundLarge border center ripple borderBlack" style="width:50%">Donate</button></p>
+			 	</div>
+			  	<h1>
+					Dollars:<span id="dollars">0</span>
+				Disasters Defeated:<span id="disastersDefeted">0</span>
+				</h1>
+				<h4>
+					Disaster Dispersement Cost:<span id="disasterDispersementCost">0 </span>
+				</h4>
+				<h4>
+					Lives Left:<span id="livesLeft">7500000000 </span>  Lives Lost:<span id="livesLost">0</span>
+				</h4>
+			</center>
+			<center>
+				Dollars per Second:<span id="DPS">0</span>
+			</center>
+		</div>	
+		<div class=pr>
+		
+			<div id=startMarkDiv>
+				<div style="position: relative; width: 0; height: 0">
+					<div class=earthquakeText>
+							<p><button id="markTheBru" data-tooltip="Start Game" onclick=start(); class="cdisaster hover hoverWhite roundLarge border borderBlack" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50"><img id="target" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50">Start The Game</button></p>
+					</div>
+				</div>
+			</div>
+			<div id=tornadoDiv>
+				<!--mark likes men-->
+				<div style="position: relative; width: 0; height: 0">
+					<div class="tornado">
+						<img src="http://simpleicon.com/wp-content/uploads/twister-256x256.png" style="display:inline-block;" width= 260px height= 300px>
+					</div>	
+					<div class=tornadoText>
+						<div class="demo">
+							<p><button id="markTheBru" data-tooltip="Pay for the efforts to stop the Tornado" onclick=removeTornado(); class="cdisaster hover hoverWhite roundLarge border borderBlack" data-tooltip="Fight the Disaster to Save Lives" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50"><img id="target" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50">Fight The Disaster</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id=hurricaneDiv>
+				<!--mark likes men-->
+				<div style="position: relative; width: 0; height: 0">
+					<div class="hurricane">
+						<div class="demo">
+							<img src="http://republicdoor.com/img/symbols/hurricane.png" style="display:inline-block;" width= 320px height= 300px>
+						</div>
+					</div>	
+					<div class=hurricaneText>
+						<p><button id="markTheBru" data-tooltip="Pay for the efforts to stop the Hurricane" onclick=removeHurricane(); class="cdisaster hover hoverWhite roundLarge border borderBlack" hinttext="Fight the Disaster to Save Lives"><img id="target" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50">Fight The Disaster</button></p>
+					</div>
+				</div>
+			</div>
+			<div id=floodDiv>
+				<!--mark likes men-->
+				<div style="position: relative; width: 0; height: 0">
+					<div class="flood">
+						<img src="https://image.flaticon.com/icons/png/512/16/16535.png" style="display:inline-block;" width= 300px height= 300px>
+					</div>	
+					<div class=floodText>
+						<div class="demo">
+							<p><button id="markTheBru" data-tooltip="Pay for the efforts to stop the Flood" onclick=removeFlood(); class="cdisaster hover hoverWhite roundLarge border borderBlack" hinttext="Fight the Disaster to Save Lives"><img id="target" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50">Fight The Disaster</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id=earthquakeDiv>
+				<!--mark likes men-->
+				<div style="position: relative; width: 0; height: 0">
+					<div class="earthquake">
+						<img src="https://maxcdn.icons8.com/Android_L/PNG/512/Weather/earthquakes-512.png" style="display:inline-block;" width= 300px height= 300px>
+					</div>	
+					<div class=earthquakeText>
+						<div class="demo">
+							<p><button id="markTheBru" data-tooltip="Pay for the efforts to stop the Earthquake" onclick=removeEarthquake(); class="cdisaster hover hoverWhite roundLarge border borderBlack" hinttext="Fight the Disaster to Save Lives"><img id="target" src=https://www.shareicon.net/data/512x512/2015/11/27/678753_man_512x512.png width="50" height="50">Fight The Disaster</button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--START OF THE NON NATURAL DISASTER STUFFF-->
+			<!--START OF THE NON NATURAL DISASTER STUFFF-->
+			<!--START OF THE NON NATURAL DISASTER STUFFF-->
+			<!--START OF THE NON NATURAL DISASTER STUFFF-->
+			
+			<div class="item2">
+				<div class="fixFont">
+					<div class="demo">
+						<p><button data-tooltip="Buy Harder Hats To Make Your Workers More Efficient" onclick=buyUpgrade(0); class="cHarderHats hover hoverWhite roundLarge border borderBlack"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/HarderHatIcon.png width="50" height="50">Harder Hats</button></p>
+					</div>
+				</div>		
+					<p>Harder Hats Cost: <span id="harderHatsCost">100</span><br>
+					Worker Multiplier: <span id="harderHatsMult">1</span><br><p>
+			</div>
+
+				<div class="demo">
+					<p><button onclick="buyResource(0)" data-tooltip="Buy Workers To Save More Lives" class="hover cWorker hoverWhite roundLarge border borderBlack" hinttext="Buys a Worker"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/Worker%20Icon.png width="50" height="50">Buy Worker</button></p>
+				</div>
+			<p>Workers: <span id="worker">0</span><br>
+			Worker Cost: <span id="workerCost">10</span><br>
+			Percentage of DPS: <span id="workerPercentage">0</span>%<p>
+				
+			<div class="item2">
+				<div class="fixFont">
+					<div class="demo">
+						<p><button data-tooltip="Buy Raftier Rafts To Make Your Rescue Teams More Efficient" onclick=buyUpgrade(1) class="hover cRaftierRafts button3 hoverWhite roundLarge border borderBlack" hinttext="Upgrade Your Rescure Team To Make Them More Efficient"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/Raftier%20Rafts%20Icon%20(1).png width="50" height="50">Raftier Rafts</button></p>
+					</div>
+				</div>
+					<p>Raftier Rafts Cost: <span id="raftierRaftsCost">200</span><br>
+					Rescue Team Multiplier: <span id="raftierRaftsMult">2</span><p>
+
+			</div>
+				
+			<div class="demo">
+				<p><button data-tooltip="Buy Rescue Teams To Save More Lives" onclick="buyResource(1)" class="cRescueTeam hover hoverWhite roundLarge border borderBlack" hinttext="Buys a Rescue Team"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/Rescue%20Team%20Icon.png width="50" height="50">Buy Rescue Team</button></p>
+			</div>
+			<p>Rescue Teams: <span id="rescueTeam">0</span><br>
+			Rescue Teams Cost: <span id="rescueTeamCost">20</span><br>
+			Percentage of DPS: <span id="rescueTeamPercentage">0</span>%
+
+
+			<div class="item2">
+				<div class="fixFont">	
+					<div class="demo">
+						<p><button data-tooltip="Buy Bigger Rotors To Make Your Medevacs More Efficient" onclick=buyUpgrade(2); class="hover cBiggerRotars button4 hoverWhite roundLarge border borderBlack" hinttext="Upgrade Your Medevacs To Make Them More Efficient"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/Bigger%20Rotors%20Icon.png width="50" height="50">Bigger Rotars</button></p>
+					</div>
+				</div>
+					<p>Bigger Rotors Cost: <span id="biggerRotorsCost">300</span><br>
+					Medevac Multiplier: <span id="biggerRotorsMult">3</span><p>
+			</div>
+			
+			<div class="demo">
+				<p><button data-tooltip="Buy Medevacs To Save More Lives" onclick="buyResource(2)" class="cMedevac hover hoverWhite roundLarge border borderBlack" hinttext="Buys a Medevac"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/Medevac%20Icon.png width="50" height="50">Buy Medevac</button></p>
+			</div>
+			<p>Medevac: <span id="medevac">0</span><br>
+			Medevac Cost: <span id="medevacCost">30</span><br>
+			Percentage of DPS: <span id="medevacPercentage">0</span>%
+			
+			<div class="demo">
+				<p><button id="resetGame" onclick="resetGame()" data-tooltip="Resets the Game (If there is a bug press this button)" class="cReset hover hoverWhite roundLarge border borderBlack" hinttext="Resets The Game"><img id="target" src=https://sites.google.com/a/mypisd.net/nicholas-wharton/home/Reset%20Icon.png width="50" height="50">Reset</button></p>
+			</div>
+		</div>
+			
+	</body>
+		
+		<script>
+		var screenWidth = window.innerWidth
+||		document.documentElement.clientWidth
+||		document.body.clientWidth;
+
+		var screenHeight = window.innerHeight
+||		document.documentElement.clientHeight
+||		document.body.clientHeight;
+
+		console.log(screenWidth);
+		console.log(screenHeight);
+
+		</script>
+		
+</html>
